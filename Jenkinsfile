@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                echo "doing build stuff.."
+                pip install -r requirements.txt
                 '''
             }
         }
@@ -20,7 +20,9 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                echo "doing test stuff.."
+                cd app
+                python3 meow.py
+                python3 hello.py --count=5
                 '''
             }
         }
