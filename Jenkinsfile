@@ -22,7 +22,7 @@ pipeline {
                 sh '''
                 cd app
                 python3 meow.py
-                python3 hello.py --count=5
+                python3 meow.py --count=5
                 '''
             }
         }
